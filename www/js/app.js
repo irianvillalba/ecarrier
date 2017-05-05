@@ -85,7 +85,7 @@ angular.module('your_app_name', [
   })
 
   .state('app.profile', {
-    //abstract: true,
+    abstract: true,
     url: '/perfil/:userId',
     views: {
       'menuContent': {
