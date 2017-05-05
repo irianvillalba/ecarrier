@@ -103,7 +103,7 @@ ion-spinner.spinner-on-load
   background-color: rgba(darken($multi-bg, 10%), 0.7);
   height: 100%;
   @include transition(all ease-in-out .3s);
-
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -2;

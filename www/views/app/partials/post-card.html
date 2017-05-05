@@ -1,6 +1,13 @@
 <div class="card-4" ng-controller="PostCardCtrl">
   <div class="list card">
-    <div class="item item-image">
+  
+<!--MENSAGEM AINDA NÃO ENVIADA-->
+   <div class="row row-enviado" ng-show="true">
+         <p>Cartão ainda não enviado. Envio programado para: <a>data</a></p>
+     </div>
+<!--FIM MENSAGEM AINDA NÃO ENVIADA-->
+   
+    <div class="item item-image">     
       <pre-img ratio="_16_15" helper-class="main-image">
         <img ng-src="{{post.picture}}" spinner-on-load>
       </pre-img>

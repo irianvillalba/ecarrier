@@ -234,6 +234,20 @@ angular.module('your_app_name.app.controllers', [])
   }).then(function(modal) {
     $scope.privacy_policy_modal = modal;
   });
+    
+  $ionicModal.fromTemplateUrl('views/app/profile/senha.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.alterar_senha_modal = modal;
+  });
+    
+  $ionicModal.fromTemplateUrl('views/app/legal/ajuda.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.ajuda_modal = modal;
+  });
 
   $scope.showTerms = function() {
     $scope.terms_of_service_modal.show();
@@ -242,9 +256,38 @@ angular.module('your_app_name.app.controllers', [])
   $scope.showPrivacyPolicy = function() {
     $scope.privacy_policy_modal.show();
   };
+    
+  $scope.showAlterarSenha = function() {
+    $scope.alterar_senha_modal.show();
+  };
 
+  $scope.showAjuda = function() {
+    $scope.ajuda_modal.show();
+  };
+    
+    
 })
 
+.controller('NovaMsgCtrl', function($scope, $cordovaImagePicker, $ionicPlatform){
+    $scope.getImageSaveContact = function() {       
+        // Image picker will load images according to these settings
+    var options = {
+        maximumImagesCount: 1, // Max number of selected images, I'm using only one for this example
+        width: 800,
+        height: 800,
+        quality: 80            // Higher is better
+    };
+ 
+    $cordovaImagePicker.getPictures(options).then(function (results) {
+                // Loop through acquired images
+        for (var i = 0; i < results.length; i++) {
+            console.log('Image URI: ' + results[i]);   // Print image URI
+        }
+    }, function(error) {
+        console.log('Error: ' + JSON.stringify(error));    // In case of error
+    });
+};
+})
 
 
 ;

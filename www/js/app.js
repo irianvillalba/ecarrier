@@ -9,7 +9,7 @@ angular.module('your_app_name', [
   'your_app_name.app.controllers',
   'your_app_name.auth.controllers',
   'your_app_name.app.services',
-  'your_app_name.views',
+  //'your_app_name.views',
   'underscore',
   'angularMoment',
   'ngIOS9UIWebViewPatch'
@@ -85,7 +85,7 @@ angular.module('your_app_name', [
   })
 
   .state('app.profile', {
-    abstract: true,
+    //abstract: true,
     url: '/profile/:userId',
     views: {
       'menuContent': {
@@ -199,6 +199,16 @@ angular.module('your_app_name', [
       'menuContent': {
         templateUrl: "views/app/shop/product-detail.html",
         controller: 'ProductCtrl'
+      }
+    }
+  })
+    
+  .state('app.nova-mensagem', {
+    url: "/novamsg",
+    views: {
+      'menuContent': {
+        templateUrl: "views/app/profile/novamsg.html",
+        controller:'NovaMsgCtrl'
       }
     }
   })

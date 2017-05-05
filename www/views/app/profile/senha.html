@@ -1,0 +1,30 @@
+<ion-modal-view class="modal-view modal-senha">
+    <ion-header-bar class="view-navigation">
+		<h1 class="title modal-title">Alterar Senha</h1>
+		<a class="button button-clear" ng-click="alterar_senha_modal.hide()"><span class="icon ion-close"></span></a>
+	</ion-header-bar>
+	
+	<ion-content class="padding">
+        <div class="row form-wrapper">
+          <div class="col">
+            <form name="senha_form" class="padding" novalidate>
+              <div class="form-fields-outer list list-inset">
+                <label class="item item-input" show-hide-container>
+                  <input type="password" placeholder="Senha Antiga" name="password" ng-model="user.password" required show-hide-input>
+                </label>
+                <label class="item item-input" show-hide-container>
+                  <input type="password" placeholder="Nova Senha" name="password" ng-model="user.password" required show-hide-input>
+                </label>
+                <label class="item item-input" show-hide-container>
+                  <input type="password" placeholder="Confirmar Senha" name="password" ng-model="user.password" required show-hide-input>
+                </label>
+              </div>
+              <button type="submit" class="log-in button button-block" ng-disabled="senha_form.$invalid">
+               Alterar Senha
+              </button>
+              <p ng-show="error" class="message error">{{error}}</p>
+        </form>
+      </div>
+    </div>
+	</ion-content>
+</ion-modal-view>
