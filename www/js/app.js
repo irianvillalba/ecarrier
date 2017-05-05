@@ -49,7 +49,7 @@ angular.module('your_app_name', [
     }
   });
   $rootScope.$on("$stateChangeSuccess", function(event, toState, toParams, fromState, fromParams){
-    if(toState.name.indexOf('app.feed') > -1)
+    if(toState.name.indexOf('app.profile') > -1)
     {
       // Restore platform default transition. We are just hardcoding android transitions to auth views.
       $ionicConfig.views.transition('platform');
@@ -86,7 +86,7 @@ angular.module('your_app_name', [
 
   .state('app.profile', {
     //abstract: true,
-    url: '/profile/:userId',
+    url: '/perfil/:userId',
     views: {
       'menuContent': {
         templateUrl: "views/app/profile/profile.html",

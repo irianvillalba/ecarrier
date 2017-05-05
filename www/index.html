@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <meta http-equiv="Content-Security-Policy" content="default-src *; script-src &apos;self&apos; &apos;unsafe-inline&apos; &apos;unsafe-eval&apos; *; style-src  &apos;self&apos; &apos;unsafe-inline&apos; *">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
     <title></title>
 
     <link href="css/ionic.app.css" rel="stylesheet">
@@ -21,7 +22,11 @@
     <script src="js/auth/auth.controllers.js"></script>
     <script src="js/app/app.controllers.js"></script>
     <script src="js/app/app.services.js"></script>
-    <!--<script src="js/views.js"></script>-->
+    <script src="js/imagepicker.js"></script>
+    
+<!--<script src="js/ng-cordova.min.js"></script>
+    <script src="cordova.js"></script>  
+    <script src="js/views.js"></script>-->
   </head>
   <body ng-app="your_app_name">
     <ion-nav-view></ion-nav-view>
