@@ -1,0 +1,82 @@
+
+<ion-view class="profile-view config-view" cache-view="false" view-title="Configurações">
+  <ion-content has-bouncing='false' class="profile-content padding" delegate-handle="profile-scroll">
+   <div class="row profile-data">
+      <div class="col">
+        <div class="profile-slides">          
+            <div class="row slide-content">
+              <div class="col col-center user-data">
+                <!-- We need a wrapper with width set for the preload image directive -->
+                <div class="user-image-outer">
+                  <pre-img ratio="_1_1" helper-class="rounded-image">
+                    <img class="user-image" src="../../../img/gus2016.jpg" spinner-on-load>
+                	</pre-img>
+                </div>
+                <h2 class="user-name">Gustavo Andrade</h2>                
+              </div>
+            </div>          
+        </div>
+      </div>
+    </div>
+    
+    <div class="row form-wrapper">
+      <div class="col">
+        <form name="altera_form" class="" novalidate>
+          <div class="form-fields-outer list list-inset">
+            <label class="item item-input">
+              <input type="text" placeholder="Alterar Nome" name="name" ng-model="user.first.name" required>
+            </label>            
+            <label class="item item-input">
+              <input type="text" placeholder="Alterar Sobrenome" name="last_name" ng-model="user.last_name" required>
+            </label>
+             <label class="item item-input">
+             <span class="input-label">Data de Nascimento</span>
+              <input type="date" placeholder="Data de Nascimento" name="date" style="color:#b3b3b3">
+            </label>
+            <li class="item item-toggle icon-left ion-social-facebook" style="color:#3b5998">
+                Facebook
+                 <label class="toggle toggle-facebook">
+                   <input type="checkbox">
+                   <div class="track">
+                     <div class="handle"></div>
+                   </div>
+                 </label>
+             </li>
+             <li class="item item-toggle icon-left ion-social-twitter" style="color:#1dcaff">
+                 Twitter
+                 <label class="toggle toggle-twitter">
+                   <input type="checkbox">
+                   <div class="track">
+                     <div class="handle"></div>
+                   </div>
+                 </label>
+             </li>
+             <li class="item item-toggle icon-left ion-social-google" style="color:#d62d20">
+                 Google+
+                 <label class="toggle toggle-google">
+                   <input type="checkbox">
+                   <div class="track">
+                     <div class="handle"></div>
+                   </div>
+                 </label>
+              </li> 
+              <li class="item item-toggle icon-left ion-social-instagram" style="color:#8a3ab9">
+                 Instagram
+                 <label class="toggle toggle-instagram">
+                   <input type="checkbox">
+                   <div class="track">
+                     <div class="handle"></div>
+                   </div>
+                 </label>
+              </li>           
+          </div>
+          <button type="submit" class="sign-up button button-block" ng-disabled="altera_form.$invalid">
+            Alterar
+          </button>
+          <p ng-show="error" class="message error">{{error}}</p>
+        </form>
+      </div>
+    </div>
+    
+  </ion-content>
+</ion-view>

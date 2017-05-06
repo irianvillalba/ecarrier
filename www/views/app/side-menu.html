@@ -1,0 +1,60 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar ng-class="{'profile-color': ('app.profile' | includedByState), 'settings-color': ('app.settings' | includedByState), 'product-color': ('app.product-detail' | includedByState), 'feed-color': ('app.feed' | includedByState), 'shop-color': ('app.shop' | includedByState), 'cart-color': ('app.cart' | includedByState), 'shipping-address-color': ('app.shipping-address' | includedByState), 'checkout-color': ('app.checkout' | includedByState), 'novamsg-color': ('app.nova-mensagem' | includedByState)}">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-content has-bouncing="false" scroll="false" class="menu-outer left-menu">
+      <div multi-bg="['img/menu-bg.jpg']">
+        <div class="row menu-top-options">
+          <div class="col col-top">
+            <ion-list>
+              <ion-item ui-sref-active="active" class="item-icon-left" menu-close ui-sref="app.profile.posts({userId:loggedUser._id})">
+                <i class="menu-icon icon ion-person"></i>
+                <h2 class="menu-text">Perfil</h2>
+              </ion-item>
+              <ion-item ui-sref-active="active" class="item-icon-left" menu-close ui-sref="app.shop.home">
+                <i class="menu-icon icon ion-bag"></i>
+                <h2 class="menu-text">Créditos</h2>
+              </ion-item>
+              <ion-item ui-sref-active="active" class="item-icon-left" menu-close  ng-click="showAjuda()" ng-controller="SettingsCtrl">
+                <i class="menu-icon icon ion-ios-help-outline"></i>
+                <h2 class="menu-text">Ajuda</h2>
+              </ion-item>
+               <ion-item ui-sref-active="active" class="item-icon-left" menu-close ui-sref="app.settings">
+                <i class="menu-icon icon ion-settings"></i>
+                <h2 class="menu-text">Configurações</h2>
+              </ion-item>
+               <ion-item ui-sref-active="active" class="item-icon-left" menu-close ng-click="showAlterarSenha()" ng-controller="SettingsCtrl">
+                <i class="menu-icon icon ion-settings" ></i>
+                <h2 class="menu-text">Alterar Senha</h2>
+              </ion-item>
+               <ion-item ui-sref-active="active" class="item-icon-left" menu-close ui-sref="app.cart">
+                <i class="menu-icon icon ion-tshirt"></i>
+                <h2 class="menu-text">Alterar Imagem de Perfil</h2>
+              </ion-item>
+            </ion-list>
+          </div>
+        </div>
+        <div class="row menu-bottom-options">
+          <div class="col col-bottom">              
+            <ion-list>
+              <ion-item ui-sref-active="active" class="item-icon-left" menu-close ui-sref="auth.welcome">
+                <i class="menu-icon icon ion-ios-close-outline"></i>
+                <h2 class="menu-text">Sair</h2>
+              </ion-item>              
+            </ion-list>  
+          </div>
+        </div>
+      </div>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
