@@ -26,7 +26,7 @@
                                         <button class="button button-clear"><h4 class="textonovamsg">Vídeos</h4></button>
                                     </div>
                                 </div>
-                                <div ng-controller="NovaMsgCtrl">
+                                <div>
                                     <img ng-model="imgselecionada" src="../../../img/card1.jpg" style="width:100%; height: auto;" />
                                 </div>
                             </div>
@@ -49,10 +49,12 @@
                     <ion-slide>
                         <div class="row slide-content">
                             <div class="col col-center">
-                                <div class="row row-selecao">
+                                <div class="row row-selecao" style="flex-wrap:wrap">
                                     <p>Seu cartão!</p>
-                                    <img ng-src="{{imgselecionada}}">
-                                    <a>{{textocartao}}</a>
+                                    <div>
+                                    <img ng-model="imgselecionada" src="../../../img/card1.jpg" style="width:100%; height: auto;" />
+                                    </div>
+                                    <p>teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste </p>
                                 </div>
                                 <div class="row row-selecao" style="flex-wrap:wrap">
                                    <div class="row">
@@ -60,13 +62,13 @@
                                    </div>
                                    <div class="row">
                                         <div class="col col-bottomb">
-                                            <button class="button  botaofb" ng-model="botaoFb">Facebook</button>
+                                            <button class="button button-clear botaofb" ng-model="botaoFb">Facebook</button>
                                         </div>
                                         <div class="col col-bottom">
-                                            <button class="button  botaotwt" ng-model="botaoTwt">Twitter</button>
+                                            <button class="button button-clear botaotwt" ng-model="botaoTwt">Twitter</button>
                                         </div>
                                         <div class="col col-bottom ">
-                                            <button class="button botaogg" ng-model="botaoGg">Google+</button>
+                                            <button class="button button-clear botaogg" ng-model="botaoGg">Google+</button>
                                         </div>
                                    </div>
                                 </div>
