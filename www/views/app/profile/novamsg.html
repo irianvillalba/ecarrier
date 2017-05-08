@@ -1,55 +1,81 @@
 <ion-view class="profile-view novamsg" cache-view="false" view-title="Nova Mensagem">
-  <ion-content has-bouncing='false' class="profile-content" delegate-handle="profile-scroll">
-    <div class="row profile-data novamsg-data">
-      <div class="col padding">
-        <ion-slide-box class="profile-slides" on-slide-changed="slideHasChanged($index)">
-          <ion-slide>
-            <div class="row slide-content">
-              <div class="col">
-              <div class="row row-selecao">
-                <div class="col"></div>
-                 <div class="col col-50 col-center ">
-                      <h3 class="textonovamsg">Escolha o tipo de mídia.</h3>
-                  </div>
-                  <div class="col"></div>
-              </div>   
-               <span></span>            
-                <!-- We need a wrapper with width set for the preload image directive -->
-                <div class="row row-selecao">
-                 <div class="col padding">
-                     <button class="button button-clear"><h4 class="textonovamsg">Foto</h4></button>   
-                  </div>
-                  <div class="col padding">
-                      <button class="button button-clear"><h4 class="textonovamsg">Vídeos</h4></button>
-                  </div>
-              </div>
-                <div ng-controller="NovaMsgCtrl">
-                    <img ng-src="" style="width:100%; height: auto;"/>
-                </div>
-              </div>
+    <ion-content has-bouncing='false' class="profile-content" delegate-handle="profile-scroll">
+        <div class="row profile-data novamsg-data">
+            <div class="col padding">
+                <ion-slide-box class="profile-slides" on-slide-changed="slideHasChanged($index)">
+
+
+                    <!--SLIDE 1-->
+                    <ion-slide>
+                        <div class="row slide-content">
+                            <div class="col">
+                                <div class="row row-selecao">
+                                    <div class="col"></div>
+                                    <div class="col col-50 col-center ">
+                                        <h3 class="textonovamsg">Escolha o tipo de mídia.</h3>
+                                    </div>
+                                    <div class="col"></div>
+                                </div>
+                                <span></span>
+                                <!-- We need a wrapper with width set for the preload image directive -->
+                                <div class="row row-selecao">
+                                    <div class="col padding">
+                                        <button class="button button-clear"><h4 class="textonovamsg">Foto</h4></button>
+                                    </div>
+                                    <div class="col padding">
+                                        <button class="button button-clear"><h4 class="textonovamsg">Vídeos</h4></button>
+                                    </div>
+                                </div>
+                                <div ng-controller="NovaMsgCtrl">
+                                    <img ng-model="imgselecionada" src="../../../img/card1.jpg" style="width:100%; height: auto;" />
+                                </div>
+                            </div>
+                        </div>
+                    </ion-slide>
+
+                    <!--SLIDE 2-->
+                    <ion-slide>
+                        <div class="row slide-content" ng-controller="NovaMsgCtrl">
+                            <div class="col col-center">
+                                <div class="row row-selecao padding">
+                                    <textarea id="TextArea" ng-model="textocartao" ng-keyup="autoExpand($event)" type="text" placeholder="Digite aqui sua mensagem."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-slide>
+
+
+                    <!--SLIDE 3-->
+                    <ion-slide>
+                        <div class="row slide-content">
+                            <div class="col col-center">
+                                <div class="row row-selecao">
+                                    <p>Seu cartão!</p>
+                                    <img ng-src="{{imgselecionada}}">
+                                    <a>{{textocartao}}</a>
+                                </div>
+                                <div class="row row-selecao" style="flex-wrap:wrap">
+                                   <div class="row">
+                                       <p>Compartilhar com:</p>
+                                   </div>
+                                   <div class="row">
+                                        <div class="col col-bottomb">
+                                            <button class="button  botaofb" ng-model="botaoFb">Facebook</button>
+                                        </div>
+                                        <div class="col col-bottom">
+                                            <button class="button  botaotwt" ng-model="botaoTwt">Twitter</button>
+                                        </div>
+                                        <div class="col col-bottom ">
+                                            <button class="button botaogg" ng-model="botaoGg">Google+</button>
+                                        </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-slide>
+                </ion-slide-box>
             </div>
-          </ion-slide>
-          <ion-slide>
-            <div class="row slide-content">
-              <div class="col col-center">
-                <p class="">
-                  teste2
-                </p>
-              </div>
-            </div>
-          </ion-slide>
-          <ion-slide>
-            <div class="row slide-content">
-              <div class="col col-center">
-                <p class="">
-                  teste3
-                </p>
-              </div>
-            </div>
-          </ion-slide>          
-        </ion-slide-box>
-      </div>
-    </div>
-      
-  </ion-content>
+        </div>
+
+    </ion-content>
 </ion-view>
