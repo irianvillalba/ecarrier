@@ -11,9 +11,9 @@ APK/
 tmp/
 PREVIEW/
 
-www/css/
-www/lib/
+
 www/fonts/
+
 www/img/orig
 www/js/views.js
 www/js/tracking-config.js

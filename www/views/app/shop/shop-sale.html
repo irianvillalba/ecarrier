@@ -1,16 +1,22 @@
-<ion-view view-title="Shop" class="shop-sale-view">
+<ion-view view-title="Histórico" class="shop-sale-view">
   <ion-content>
+    <div class="row">
+        <div class="col" style="background:#FFF; margin:2vw;border-radius:3px;">
+            <h5 style="text-align:center;">Créditos em conta: <span style="background:lightgray; border-radius:3px; margin:1vw;padding:1vw;">R$100,00</span></h5>
+        </div>
+    </div>
     <div class="row shop-products-narrow-cards-outer">
-      <div ng-repeat="product in products" class="col col-50 shop-product-narrow-card" ui-sref="app.product-detail({productId: product._id})">
+      <div ng-repeat="product in products" class="col shop-product-narrow-card" ui-sref="app.product-detail({productId: product._id})">
         <div class="list card">
           <div class="item item-image">
-            <pre-img ratio="_1_1" helper-class="main-image">
+            <pre-img ratio="_2_1" helper-class="main-image">
               <img ng-src="{{product.picture}}" spinner-on-load>
             </pre-img>
           </div>
           <div class="item item-body">
             <h2 class="card-title">{{product.title}}</h2>
-            <p class="card-description"><b>${{product.price}}</b> - {{product.description}}</p>
+            <p class="card-description"><b>R${{product.price}}</b> - {{product.description}}</p>
+            <p class="card-description">Na data de: </p>
           </div>
         </div>
       </div>

@@ -1,0 +1,280 @@
+/*----------TELA DE ALTERAR SENHA-----------*/
+
+.modal-senha {
+    background-color: transparent;
+    background-image: url(../img/bg11.jpg);
+}
+
+.modal-senha ion-header-bar {
+    background: transparent;
+}
+
+.modal-senha .modal-title {
+    color: #fff;
+}
+
+.modal-senha .ion-close {
+    color: #fff;
+}
+
+.modal-senha * {
+    color: #444;
+}
+
+.modal-senha .form-wrapper .sign-up.button,
+.modal-senha .form-wrapper .log-in.button {
+    background-color: #ff5a60;
+    color: #FFFFFF;
+    border-color: #ff5056;
+    font-weight: 500;
+}
+
+.modal-senha .form-wrapper input::-webkit-input-placeholder {
+    color: #b3b3b3;
+}
+
+.modal-senha .form-wrapper input::-moz-placeholder {
+    color: #b3b3b3;
+}
+
+.modal-senha .form-wrapper input:-moz-placeholder {
+    color: #b3b3b3;
+}
+
+.modal-senha .form-wrapper input:-ms-input-placeholder {
+    color: #b3b3b3;
+}
+
+.modal-senha .form-fields-outer {
+    margin: 0px;
+    padding: 0px 16px;
+}
+
+.modal-senha .form-fields-outer .item-input {
+    padding-left: 0px;
+    padding-right: 0px;
+    border-left: none;
+    border-right: none;
+}
+
+.modal-senha .show-hide-input {
+    display: inherit;
+    width: 100%;
+}
+
+.modal-senha .toggle-view-anchor {
+    position: absolute;
+    top: 6px;
+    right: 0px;
+    height: 34px;
+    line-height: 34px;
+}
+
+.modal-senha .toggle-view-anchor * {
+    color: #cccccc !important;
+    display: block;
+    font-size: 24px;
+    width: 45px;
+    text-align: center;
+    font-weight: 500;
+}
+
+
+/*----------TELA DE CONFIGURAÇÕES-----------*/
+
+.config-view {
+    background-image: url(../img/bg22.jpg);
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+
+.config-view ion-nav-bar.settings-color ion-header-bar {
+    background-color: transparent;
+}
+
+.config-view * {
+    color: #444;
+}
+
+.config-view .form-wrapper .sign-up.button,
+.config-view .form-wrapper .log-in.button {
+    background-color: #ff5a60;
+    color: #FFFFFF;
+    border-color: #ff5056;
+    font-weight: 500;
+}
+
+.config-view .form-wrapper input::-webkit-input-placeholder {
+    color: #b3b3b3;
+}
+
+.config-view .form-wrapper input::-moz-placeholder {
+    color: #b3b3b3;
+}
+
+.config-view .form-wrapper input:-moz-placeholder {
+    color: #b3b3b3;
+}
+
+.config-view .form-wrapper input:-ms-input-placeholder {
+    color: #b3b3b3;
+}
+
+.config-view .form-fields-outer {
+    margin: 0px;
+    padding: 0px 16px;
+}
+
+.config-view .form-fields-outer .item-input {
+    padding-left: 0px;
+    padding-right: 0px;
+    border-left: none;
+    border-right: none;
+}
+
+.config-view .form-fields-outer .item-toggle {
+    padding-left: 0px;
+    padding-right: 0px;
+    border-left: none;
+    border-right: none;
+}
+
+.config-view .show-hide-input {
+    display: inherit;
+    width: 100%;
+}
+
+.config-view .toggle-view-anchor {
+    position: absolute;
+    top: 6px;
+    right: 0px;
+    height: 34px;
+    line-height: 34px;
+}
+
+.config-view .toggle-view-anchor * {
+    color: #cccccc !important;
+    display: block;
+    font-size: 24px;
+    width: 45px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.config-view span {
+    color: #b3b3b3;
+    margin-right: 8vw;
+    font-size: 4vw;
+}
+
+
+/*----------TELA DE PERFIL-----------*/
+
+.profile-view .botaonova{
+    background-color: #fff;
+    opacity:0.8;
+    border-radius:3px;
+}
+
+
+/*----------TELA DE NOVA MENSAGEM-----------*/
+
+.novamsg {
+    background-image: url(../img/bg10.jpg);
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+
+.novamsg .novamsg-data {
+    height: 100%;
+}
+
+.novamsg .row-selecao {
+    background: #000;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 3px;
+    margin: 5vw 0;
+}
+
+.novamsg .textonovamsg {
+    color: #fff;
+    text-shadow: 2px 2px 8px #000;
+    text-align: center;
+}
+
+.row-selecao textarea {
+    color: white;
+    height: auto;
+    max-width: 290px;
+    color: #999;
+    font-weight: 400;
+    font-size: 4vw;
+    width: 100%;
+    background: transparent;
+    border-radius: 3px;
+    line-height: 1em;
+    border: none;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    -webkit-transition: height 2s ease;
+    -moz-transition: height 2s ease;
+    -ms-transition: height 2s ease;
+    -o-transition: height 2s ease;
+    transition: height 2s ease;
+}
+
+.row-selecao .botaofb{
+    border-radius:50%;
+    width:60px;
+    height:60px;
+    background-color: blue;
+    color:white;
+    font-size: 3vw;
+    max-height:75px;
+}
+.row-selecao .botaotwt{
+    border-radius:50%;
+    width:60px;
+    height:60px;
+    background-color:deepskyblue;
+    color:white;
+    font-size: 3vw;
+    max-height:75px;
+}
+.row-selecao .botaogg{
+    border-radius:50%;
+    width:60px;
+    height:60px;
+    background-color:red;
+    color:white;
+    font-size: 3vw;
+    max-height:75px;
+}
+
+.row-selecao p{
+    color:#fff;
+    text-align:center;
+    width:100%;
+    text-shadow: 2px 2px 8px #000;
+}
+
+/*---------TELA DE ABERTURA-------*/
+
+.imgWelcome{
+    max-height: 100px;
+    max-width: 150px;
+    margin-top:2vw;
+    margin-bottom:-5vw;
+}

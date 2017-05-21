@@ -1,4 +1,4 @@
-<ion-view class="profile-view novamsg" cache-view="false" view-title="Nova Mensagem">
+<ion-view class="profile-view novamsg" cache-view="false" view-title="Novo cartão">
     <ion-content has-bouncing='false' class="profile-content" delegate-handle="profile-scroll">
         <div class="row profile-data novamsg-data">
             <div class="col padding">
@@ -10,11 +10,9 @@
                         <div class="row slide-content">
                             <div class="col">
                                 <div class="row row-selecao">
-                                    <div class="col"></div>
-                                    <div class="col col-50 col-center ">
-                                        <h3 class="textonovamsg">Escolha o tipo de mídia.</h3>
+                                    <div class="col">
+                                        <h3 class="textonovamsg">Escolha o tipo<br>de mídia.</h3>
                                     </div>
-                                    <div class="col"></div>
                                 </div>
                                 <span></span>
                                 <!-- We need a wrapper with width set for the preload image directive -->
@@ -27,7 +25,7 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <img ng-model="imgselecionada" src="../../../img/card1.jpg" style="width:100%; height: auto;" />
+                                    <img src="img/card1.jpg" style="width:100%; height: auto;" />
                                 </div>
                             </div>
                         </div>
@@ -38,7 +36,7 @@
                         <div class="row slide-content" ng-controller="NovaMsgCtrl">
                             <div class="col col-center">
                                 <div class="row row-selecao padding">
-                                    <textarea id="TextArea" ng-model="textocartao" ng-keyup="autoExpand($event)" type="text" placeholder="Digite aqui sua mensagem."></textarea>
+                                    <textarea id="TextArea" ng-keyup="autoExpand($event)" type="text" placeholder="Digite aqui sua mensagem."></textarea>
                                 </div>
                             </div>
                         </div>
@@ -49,12 +47,12 @@
                     <ion-slide>
                         <div class="row slide-content">
                             <div class="col col-center">
-                                <div class="row row-selecao" style="flex-wrap:wrap">
+                                <div class="row row-selecao" style="flex-wrap:wrap;overflow:hidden; max-height:350px">
                                     <p>Seu cartão!</p>
                                     <div>
-                                    <img ng-model="imgselecionada" src="../../../img/card1.jpg" style="width:100%; height: auto;" />
+                                    <img src="img/card1.jpg" style="width:100%; height: auto;">
                                     </div>
-                                    <p>teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste </p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat id, atque quas eos labore recusandae iusto similique adipisci perspiciatis quis accusamus aspernatur voluptate excepturi officiis cupiditate autem, aliquam laborum porro?</p>
                                 </div>
                                 <div class="row row-selecao" style="flex-wrap:wrap">
                                    <div class="row">
