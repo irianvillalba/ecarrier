@@ -123,7 +123,7 @@ angular.module('your_app_name.app.controllers', [])
   			cssClass: 'popup-outer comments-view',
   			templateUrl: 'views/app/partials/comments.html',
   			scope: angular.extend($scope, {current_post: post}),
-  			title: post.comments+' Comments',
+  			title: post.comments+' Commentários',
   			buttons: [
   				{ text: '', type: 'close-popup ion-ios-close-outline' }
   			]
@@ -187,6 +187,12 @@ angular.module('your_app_name.app.controllers', [])
   ShopService.getProducts().then(function(products){
     $scope.popular_products = products.slice(0, 2);
   });
+    
+    $scope.userValor= {
+        min:5,
+        max:100,
+        value:50
+    }
 })
 
 
@@ -271,12 +277,7 @@ angular.module('your_app_name.app.controllers', [])
 
 .controller('NovaMsgCtrl', ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
   
-  // Load the data
-  $http.get('http://www.corsproxy.com/loripsum.net/api/plaintext').then(function (res) {
-		$scope.textocartao = res.data;
-    $timeout(expand, 0);
-  });
-  
+  // Load the data  
   $scope.autoExpand = function(e) {
         var element = typeof e === 'object' ? e.target : document.getElementById(e);
     		var scrollHeight = element.scrollHeight -60; // replace 60 by the sum of padding-top and padding-bottom
