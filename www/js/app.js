@@ -12,7 +12,10 @@ angular.module('your_app_name', [
   //'your_app_name.views',
   'underscore',
   'angularMoment',
-  'ngIOS9UIWebViewPatch'
+  'ngIOS9UIWebViewPatch', 
+  'ionic-datepicker',
+  'ngCordova',
+  'ui.mask'
 ])
 
 
@@ -208,6 +211,22 @@ angular.module('your_app_name', [
     views: {
       'menuContent': {
         templateUrl: "views/app/profile/novamsg.html",
+        controller:'NovaMsgCtrl'
+      }
+    }
+  }).state('app.nova-mensagem2', {
+    url: "/novamsg2",
+    views: {
+      'menuContent': {
+        templateUrl: "views/app/profile/novamsg2.html",
+        controller:'NovaMsgCtrl'
+      }
+    }
+  }).state('app.nova-mensagem3', {
+    url: "/novamsg3",
+    views: {
+      'menuContent': {
+        templateUrl: "views/app/profile/novamsg3.html",
         controller:'NovaMsgCtrl'
       }
     }

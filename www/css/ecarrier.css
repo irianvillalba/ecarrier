@@ -202,9 +202,6 @@
 }
 
 .novamsg .row-selecao {
-    background: #000;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 3px;
     margin: 5vw 0;
 }
 
@@ -215,7 +212,6 @@
 }
 
 .row-selecao textarea {
-    color: white;
     height: auto;
     max-width: 290px;
     color: #999;
@@ -224,7 +220,7 @@
     width: 100%;
     background: transparent;
     border-radius: 3px;
-    line-height: 1em;
+    line-height: 1.5em;
     border: none;
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
     padding: 30px;
@@ -236,38 +232,74 @@
 }
 
 .row-selecao .botaofb{
-    border-radius:50%;
-    width:60px;
-    height:60px;
-    background-color: blue;
+    background-color: #3b5998;
     color:white;
-    font-size: 3vw;
-    max-height:75px;
+    
+}.row-selecao .botaofboff{
+    opacity:0.1;
+    background-color: #3b5998;
+    color:white;
+    
 }
 .row-selecao .botaotwt{
-    border-radius:50%;
-    width:60px;
-    height:60px;
-    background-color:deepskyblue;
+    background-color:#1da1f2;
     color:white;
-    font-size: 3vw;
-    max-height:75px;
+    
+}.row-selecao .botaotwtoff{
+    opacity:0.1;
+    background-color:#1da1f2;
+    color:white;
+   
 }
 .row-selecao .botaogg{
-    border-radius:50%;
-    width:60px;
-    height:60px;
-    background-color:red;
+    background-color:#db4437;
     color:white;
-    font-size: 3vw;
-    max-height:75px;
+    
+}.row-selecao .botaoggoff{
+    opacity:0.1;
+    background-color:#db4437;
+    color:white;
+    
+}
+.row-selecao .botaotele{
+    background-color:#5682a3;
+    color:white;
+    
+}.row-selecao .botaoteleoff{
+    opacity:0.1;
+    background-color:#5682a3;
+    color:white;
+    
+}
+.row-selecao .botaoinsta{
+    background:radial-gradient(ellipse at 70% 70%,#ee583f 8%,#d92d77 42%,#bd3381 58%);
+    color:white;
+    
+}.row-selecao .botaoinstaoff{
+    opacity:0.1;
+    background:radial-gradient(ellipse at 70% 70%,#ee583f 8%,#d92d77 42%,#bd3381 58%);
+    color:white;
+    
 }
 
 .row-selecao p{
-    color:#fff;
-    text-align:center;
+    color:#000;
+    text-align:justify;
     width:100%;
-    text-shadow: 2px 2px 8px #000;
+    font-size:0.7em;
+}
+
+.row-selecao .input-label{
+    color:#000;
+}
+
+.botao-avanca{
+    position:fixed;
+    right:5px;
+    color:#fff !important;
+    text-shadow:0px 1px 5px #000;
+}.botao-avanca:before{
+    line-height:1.3em!important;
 }
 
 /*---------TELA DE ABERTURA-------*/
@@ -277,4 +309,21 @@
     max-width: 150px;
     margin-top:2vw;
     margin-bottom:-5vw;
+}
+/*--------------PAGAMENTO---------------*/
+
+.pagamento-view ion-content{
+    background-color:#fff;
+}
+
+.pagamento-view .cardpag{
+    border-radius:5px;
+    background-color:antiquewhite;
+    margin-top:15vw;
+}
+
+/*---------------GERAL---------------*/
+
+.width-full{
+    width:100%;
 }
