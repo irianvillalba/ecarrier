@@ -1,0 +1,54 @@
+<ion-modal-view view-title="Pagamento" class="modal-view">
+    <ion-header-bar>
+        <h1 class="title modal-title">Pagamento</h1>
+        <a class="button button-clear" ng-click="pagamento_modal.hide()"><span class="icon ion-close"></span></a>
+    </ion-header-bar>
+    <ion-content class="padding">
+        
+            <h3 class="text-center">Sua compra é de: <span style="background:aliceblue;padding:5px;border-radius:5px;">R$50</span></h3>
+            
+            <p class="text-center">Favor inserir os dados de seu cartão para finalizarmos sua compra.</p>
+            
+            <div class="row form-wrapper">
+            <div class="col">
+                <form name="pagamento_form" class="padding" novalidate>
+                    <div class="form-fields-outer list list-inset">
+                        <label class="item item-input item-stacked-label">
+                              <input type="text" placeholder="Nome, igual ao do cartão." name="nomecartao" ng-model="nome.cartao" required>
+                            </label>                         
+                        <label class="item item-input item-stacked-label">
+                             <!--<span class="input-label">Número do cartão.</span>-->
+                              <input type="text" placeholder="Número do cartão" ui-mask="9999-9999-9999-9999"  ui-mask-placeholder ui-mask-placeholder-char="x" name="digitoscartao" ng-model="numero.cartao" required>
+                            </label>
+                        <label class="item item-input item-stacked-label">
+                             <!--<span class="input-label">Dígitos do cartão.</span>-->
+                              <input type="text" placeholder="Dígitos do cartão" ui-mask="999"  ui-mask-placeholder ui-mask-placeholder-char="x" name="digitoscartao" ng-model="digitos.cartao" required> 
+                            </label>                            
+                        <label class="item item-input" ng-controller="dataCtrl" ng-click="datePicker()">
+                            <div class="input-label" style="color:#777777;font-size:4vw;">
+                              Data de vencimento:
+                            </div>
+                            <span style="padding-left:55px;" ng-model="data.cartao">{{datePickerDias | date:'MM/yy'}}</span>
+                          </label>
+                          <label class="item item-input item-select">
+                            <div class="input-label" style="color:#777777;font-size:4vw;">
+                              Bandeira do cartão:
+                            </div>
+                            <select style="padding-left:3px;" ng-model="bandeira.cartao">
+                              <option value="visa">Visa</option>                        
+                              <option value="mastercard">MasterCard</option>                        
+                            </select>
+                          </label>
+                    </div>
+                    <button type="submit" class="log-in button button-block" ui-sref="app.shipping-address" ng-click="pagamento_modal.hide()">
+                           Efetuar Pagamento
+                          </button>
+                    <p ng-show="error" class="message error">{{error}}</p>
+                </form>
+            </div>
+            </div>
+        
+
+
+    </ion-content>
+</ion-modal-view>

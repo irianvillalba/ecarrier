@@ -29,10 +29,12 @@
             <label class="item item-input">
               <input type="text" placeholder="Alterar Sobrenome" name="last_name" ng-model="user.last_name" required>
             </label>
-             <label class="item item-input">
-             <span class="input-label">Data de Nascimento</span>
-              <input type="date" placeholder="Data de Nascimento" name="date" style="color:#b3b3b3">
-            </label>
+             <label class="item item-input" ng-controller="dataCtrl" ng-click="datePicker()">
+                <div class="input-label" style="color:#b3b3b3;font-size:4vw;">
+                Data de nascimento:
+                </div>
+                <span style="padding-left:55px;">{{datePickerDias | date:'dd/MM/yy'}}</span>
+                </label>
             <li class="item item-toggle icon-left ion-social-facebook" style="color:#3b5998">
                 Facebook
                  <label class="toggle toggle-facebook">
@@ -54,6 +56,15 @@
              <li class="item item-toggle icon-left ion-social-google" style="color:#d62d20">
                  Google+
                  <label class="toggle toggle-google">
+                   <input type="checkbox">
+                   <div class="track">
+                     <div class="handle"></div>
+                   </div>
+                 </label>
+              </li>                 
+              <li class="item item-toggle icon-left ion-paper-airplane" style="color:#5682a3">
+                 Telegram
+                 <label class="toggle toggle-telegram">
                    <input type="checkbox">
                    <div class="track">
                      <div class="handle"></div>
