@@ -10,7 +10,7 @@
             </pre-img>
           </div>
         </div>
-        <div class="row option-copy">
+        <div class="row option-copy"  ng-click="showPagamento()">
           <div class="col col-75">
             <span>Comprar Créditos</span>
           </div>
@@ -28,7 +28,7 @@
             </pre-img>
           </div>
         </div>
-        <div class="row option-copy">
+        <div class="row option-copy"  ng-click="showPagamento()">
           <div class="col col-75">
             <span>Comprar Créditos.</span>
           </div>
@@ -46,7 +46,7 @@
             </pre-img>
           </div>
         </div>
-        <div class="row option-copy">
+        <div class="row option-copy"  ng-click="showPagamento()">
           <div class="col col-75">
             <span>Comprar Créditos</span>
           </div>
@@ -56,14 +56,14 @@
         </div>
       </a>
     </div>
-    <div class="item item-divider shop-section-title">
+    <div class="item item-divider shop-section-title text-center">
       <span class="title-copy">Não quer se limitar aos valores de cima? <br>Escolha um valor seu: R${{userValor.value}}</span>
       <div class="item range range-positive">
         <p>R$5</p>
         <input type="range" name="volume" step="5" min="5" min="{{useValor.min}}" max="{{userValor.max}}" value="{{userValor.value}}" ng-model="userValor.value">
         <p>R$100</p>
       </div>
-      <button class="button button-royal button-full">Quero esse valor!</button>
+      <button class="button button-royal button-full" ng-click="showPagamento()">Quero esse valor!</button>
     </div>
   </ion-content>
 </ion-view>

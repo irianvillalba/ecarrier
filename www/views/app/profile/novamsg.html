@@ -1,79 +1,45 @@
-<ion-view class="profile-view novamsg" cache-view="false" view-title="Novo cartão">
-    <ion-content has-bouncing='false' class="profile-content" delegate-handle="profile-scroll">
+<ion-view class="profile-view novamsg" cache-view="true" view-title="Seleção de mídia.">
+    <ion-content has-bouncing='false'>
         <div class="row profile-data novamsg-data">
             <div class="col padding">
-                <ion-slide-box class="profile-slides" on-slide-changed="slideHasChanged($index)">
-
-
-                    <!--SLIDE 1-->
-                    <ion-slide>
-                        <div class="row slide-content">
-                            <div class="col">
-                                <div class="row row-selecao">
-                                    <div class="col">
-                                        <h3 class="textonovamsg">Escolha o tipo<br>de mídia.</h3>
-                                    </div>
-                                </div>
-                                <span></span>
-                                <!-- We need a wrapper with width set for the preload image directive -->
-                                <div class="row row-selecao">
-                                    <div class="col padding">
-                                        <button class="button button-clear"><h4 class="textonovamsg">Foto</h4></button>
-                                    </div>
-                                    <div class="col padding">
-                                        <button class="button button-clear"><h4 class="textonovamsg">Vídeos</h4></button>
-                                    </div>
-                                </div>
-                                <div>
-                                    <img src="img/card1.jpg" style="width:100%; height: auto;" />
+                <div>
+                    <a class="button button-clear button-small icon-right ion-chevron-right botao-avanca" ui-sref="app.nova-mensagem2">Próximo</a>
+                    <div class="row slide-content">
+                        <div class="col padding" style="background:#fff; border-radius:5px;height: auto;max-height: 80%;margin-top: 10vw;">
+                            <div class="row">
+                                <div class="col">
+                                    <h4 class="text-center">Tipo de mídia</h4>
                                 </div>
                             </div>
-                        </div>
-                    </ion-slide>
-
-                    <!--SLIDE 2-->
-                    <ion-slide>
-                        <div class="row slide-content" ng-controller="NovaMsgCtrl">
-                            <div class="col col-center">
-                                <div class="row row-selecao padding">
-                                    <textarea id="TextArea" ng-keyup="autoExpand($event)" type="text" placeholder="Digite aqui sua mensagem."></textarea>
+                            <!-- We need a wrapper with width set for the preload image directive -->
+                            <div class="row" ng-controller="imgController">
+                                <div class="col">
+                                    <button class="button button-block button-small icon-left ion-images padding">Foto</button>
+                                </div>
+                                <div class="col">
+                                    <button class="button button-block button-small icon-left ion-camera padding" ng-click="takePicture()">Câmera</button>
+                                </div>
+                                <div class="col">
+                                    <button class="button button-block button-small icon-left ion-film-marker padding" ng-click="takePicture()">Vídeo</button>
                                 </div>
                             </div>
-                        </div>
-                    </ion-slide>
-
-
-                    <!--SLIDE 3-->
-                    <ion-slide>
-                        <div class="row slide-content">
-                            <div class="col col-center">
-                                <div class="row row-selecao" style="flex-wrap:wrap;overflow:hidden; max-height:350px">
-                                    <p>Seu cartão!</p>
-                                    <div>
-                                    <img src="img/card1.jpg" style="width:100%; height: auto;">
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat id, atque quas eos labore recusandae iusto similique adipisci perspiciatis quis accusamus aspernatur voluptate excepturi officiis cupiditate autem, aliquam laborum porro?</p>
-                                </div>
-                                <div class="row row-selecao" style="flex-wrap:wrap">
-                                   <div class="row">
-                                       <p>Compartilhar com:</p>
-                                   </div>
-                                   <div class="row">
-                                        <div class="col col-bottomb">
-                                            <button class="button button-clear botaofb" ng-model="botaoFb">Facebook</button>
+                            <div>
+                                <img src="img/card1.jpg" style="width:100%; height: auto;" />
+                            </div>
+                            <div ng-controller="dataCtrl">
+                                <label class="item item-input item-select" ng-click="datePicker()">
+                                        <div class="input-label">
+                                          Data de entrega:
                                         </div>
-                                        <div class="col col-bottom">
-                                            <button class="button button-clear botaotwt" ng-model="botaoTwt">Twitter</button>
-                                        </div>
-                                        <div class="col col-bottom ">
-                                            <button class="button button-clear botaogg" ng-model="botaoGg">Google+</button>
-                                        </div>
-                                   </div>
-                                </div>
+                                        <select>
+                                          <option>{{datePickerDias | date:'dd/MM/yyyy'}}</option>
+                                        </select>
+                                    </label>
                             </div>
                         </div>
-                    </ion-slide>
-                </ion-slide-box>
+                    </div>
+                </div>
+
             </div>
         </div>
 

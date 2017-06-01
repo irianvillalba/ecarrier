@@ -7682,11 +7682,11 @@ input[type="color"] {
 textarea {
   padding-left: 0; }
   textarea::-moz-placeholder {
-    color: white; }
+    color: #777777; }
   textarea:-ms-input-placeholder {
-    color: white; }
+    color: #777777; }
   textarea::-webkit-input-placeholder {
-    color: white;
+    color: #777777;
     text-indent: -3px; }
 
 textarea {
@@ -7735,15 +7735,15 @@ input[type="file"] {
 
 input::-moz-placeholder,
 textarea::-moz-placeholder {
-  color: white; }
+  color: #777777; }
 
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
-  color: white; }
+  color: #777777; }
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  color: white;
+  color: #777777;
   text-indent: 0; }
 
 input[disabled],
@@ -8045,7 +8045,10 @@ input:checked + .checkbox-icon:after {
 
 .toggle.toggle-instagram input:checked + .track {
   border-color: #8a3ab9;
-  background-color: #8a3ab9; }
+  background:radial-gradient(ellipse at 70% 70%,#ee583f 8%,#d92d77 42%,#bd3381 58%); }
+.toggle.toggle-telegram input:checked + .track {
+  border-color: #5682a3;
+  background-color:#5682a3; }
 
 .toggle input {
   display: none; }
@@ -10994,4 +10997,40 @@ ion-nav-bar.novamsg-color * {
   color: #fff; 
   text-shadow: 2px 2px 8px black;}
   ion-nav-bar.novamsg-color * .buttons button::before {
+    color: #fff; }
+
+ion-nav-bar.novamsg2-color ion-header-bar {
+  background-color: transparent !important;
+  background: transparent !important;
+  border: none !important;
+  background-size: 0px !important; }
+
+ion-nav-bar.novamsg2-color * {
+  color: #fff; 
+  text-shadow: 2px 2px 8px black;}
+  ion-nav-bar.novamsg2-color * .buttons button::before {
+    color: #fff; }
+
+ion-nav-bar.novamsg3-color ion-header-bar {
+  background-color: transparent !important;
+  background: transparent !important;
+  border: none !important;
+  background-size: 0px !important; }
+
+ion-nav-bar.novamsg3-color * {
+  color: #fff; 
+  text-shadow: 2px 2px 8px black;}
+  ion-nav-bar.novamsg3-color * .buttons button::before {
+    color: #fff; }
+
+ion-nav-bar.pagamento-color ion-header-bar {
+  background-color: transparent !important;
+  background: transparent !important;
+  border: none !important;
+  background-size: 0px !important; }
+
+ion-nav-bar.pagamento-color * {
+  color: #fff; 
+  text-shadow: 2px 2px 8px black;}
+  ion-nav-bar.pagamento-color * .buttons button::before {
     color: #fff; }

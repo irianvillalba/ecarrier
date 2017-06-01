@@ -1,0 +1,61 @@
+<ion-view class="profile-view novamsg" cache-view="true" view-title="Como ficou seu cartão!">
+    <ion-content has-bouncing='false'>
+        <div class="row profile-data novamsg-data">
+            <div class="col padding">
+                <div class="col">
+                    <div class="row row-selecao" style="flex-wrap:wrap;overflow:hidden;background:#fff;border-radius:5px;height:auto;margin-top:3vw;padding:0;">
+                        <h5 style="width:100%; text-align:center">Seu cartão!</h5>
+                        <div style="width:100%; height: auto;">
+                            <img src="img/card1.jpg" style="width:100%; height: auto;">
+                        </div>
+                        <p class="padding" style="margin:0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat id, atque quas eos labore recusandae iusto similique adipisci perspiciatis quis accusamus aspernatur voluptate excepturi officiis cupiditate autem, aliquam laborum porro?
+                        </p>  
+                        
+                        <div style="text-align: center;width: 100%;">
+                            <h5 style="margin:0" class="padding">Para ser entregue na data de: <span>21/08/2018</span> </h5>
+                        </div>
+                                              
+                        
+                        
+                    </div>
+                    <div class="row row-selecao" style="flex-wrap:wrap;overflow:hidden; max-height:350px;background:#fff; border-radius:5px;height:auto;margin-top:3vw;padding:0;">
+                        <div class="row text-center">
+                            <h5 style="width:100%">Compartilhar com:</h5>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col col-bottom">
+                                <button class="button button-clear button-small icon ion-social-facebook" ng-model="botaoFb" ng-click="botaoFb.clicked=!botaoFb.clicked" ng-class="!botaoFb.clicked ? 'botaofboff' : 'botaofb'"></button>
+                            </div>
+                            <div class="col col-bottom">
+                                <button class="button button-clear button-small icon ion-social-twitter" ng-model="botaoTwt" ng-click="botaoTwt.clicked = !botaoTwt.clicked" ng-class="!botaoTwt.clicked ? 'botaotwtoff' : 'botaotwt'"></button>
+                            </div>
+                            <div class="col col-bottom ">
+                                <button class="button button-clear button-small icon ion-social-googleplus" ng-model="botaoGg" ng-click="botaoGg.clicked = !botaoGg.clicked" ng-class="!botaoGg.clicked ? 'botaoggoff' : 'botaogg'"></button>
+                            </div>
+                            <div class="col col-bottom ">
+                                <button class="button button-clear button-small icon ion-paper-airplane" ng-model="botaoTele" ng-click="botaoTele.clicked = !botaoTele.clicked" ng-class="!botaoTele.clicked ? 'botaoteleoff' : 'botaotele'"></button>
+                            </div> 
+                            <div class="col col-bottom ">
+                                <button class="button button-clear button-small icon ion-social-instagram" ng-model="botaoInsta" ng-click="botaoInsta.clicked = !botaoInsta.clicked" ng-class="!botaoInsta.clicked ? 'botaoinstaoff' : 'botaoinsta'"></button>
+                            </div>                                          
+                        </div>
+                        
+                        <div class="row text-center padding">
+                           <h5 style="width:100%">Enviar para um Email ou SMS:</h5>
+                        </div>
+                           <div class="padding list width-full">
+                            <label class="item item-input" style="border-bottom:2px solid #D3D3D3">
+                               <span class="input-label">Email:</span>
+                                <input type="email">
+                            </label>
+                            <label class="item item-input">
+                               <span class="input-label">Celular:</span>
+                                <input type="text">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

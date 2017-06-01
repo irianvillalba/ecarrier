@@ -176,6 +176,7 @@ angular.module('your_app_name.app.controllers', [])
 })
 
 
+
 .controller('ShopCtrl', function($scope, ShopService, localStorage) {
 
   $scope.usuario = localStorage.getObject('usuario');
@@ -183,6 +184,10 @@ angular.module('your_app_name.app.controllers', [])
   $scope.doAltera = function() {
       console.log("Ok");
   }
+})
+
+
+.controller('ShopCtrl', function($scope, ShopService, $ionicModal) {
 
   $scope.products = [];
   $scope.popular_products = [];
@@ -196,11 +201,22 @@ angular.module('your_app_name.app.controllers', [])
   ShopService.getProducts().then(function(products){
     $scope.popular_products = products.slice(0, 2);
   });
-    
+
     $scope.userValor= {
         min:5,
         max:100,
         value:50
+    }
+
+$ionicModal.fromTemplateUrl('views/app/shop/pagamento.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.pagamento_modal = modal;
+  });
+
+    $scope.showPagamento = function(){
+        $scope.pagamento_modal.show();
     }
 })
 
@@ -230,8 +246,8 @@ angular.module('your_app_name.app.controllers', [])
 })
 
 
-.controller('CheckoutCtrl', function($scope) {
-  //$scope.paymentDetails;
+.controller('CheckoutCtrl', function($scope, $ionicModal) {
+
 })
 
 .controller('SettingsCtrl', function($scope, $ionicModal, localStorage) {
@@ -256,14 +272,14 @@ angular.module('your_app_name.app.controllers', [])
   }).then(function(modal) {
     $scope.privacy_policy_modal = modal;
   });
-    
+
   $ionicModal.fromTemplateUrl('views/app/profile/senha.html', {
     scope: $scope,
     animation: 'slide-in-up'
   }).then(function(modal) {
     $scope.alterar_senha_modal = modal;
   });
-    
+
   $ionicModal.fromTemplateUrl('views/app/legal/ajuda.html', {
     scope: $scope,
     animation: 'slide-in-up'
@@ -278,7 +294,7 @@ angular.module('your_app_name.app.controllers', [])
   $scope.showPrivacyPolicy = function() {
     $scope.privacy_policy_modal.show();
   };
-    
+
   $scope.showAlterarSenha = function() {
     $scope.alterar_senha_modal.show();
   };
@@ -286,28 +302,105 @@ angular.module('your_app_name.app.controllers', [])
   $scope.showAjuda = function() {
     $scope.ajuda_modal.show();
   };
-    
-    
+
+
 })
 
 
 .controller('NovaMsgCtrl', ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
-  
-  // Load the data  
+
+  // Load the data
   $scope.autoExpand = function(e) {
         var element = typeof e === 'object' ? e.target : document.getElementById(e);
     		var scrollHeight = element.scrollHeight -60; // replace 60 by the sum of padding-top and padding-bottom
-        element.style.height =  scrollHeight + "px";    
+        element.style.height =  scrollHeight + "px";
     };
-  
+
   function expand() {
     $scope.autoExpand('TextArea');
   }
-    
 
-    
-    
-}]);
+   /* var options = {
+        date: new Date(),
+        mode: 'date'
+    };
+
+    function onSuccess(date) {
+        alert('Selected date: ' + date);
+    }
+
+    function onError(error) { // Android only
+        alert('Error: ' + error);
+    }
+
+    datePicker.show(options, onSuccess, onError);*/
 
 
+}])
 
+.controller('dataCtrl', function($scope, $http, ionicDatePicker){
+
+        $scope.datePickerDias;
+
+        $scope.datePicker = function(val){
+          var ipObj1 = {
+            callback: function (val) {  //Mandatory
+              console.log('Return value from the datepicker popup is : ' + val, new Date(val));
+              $scope.datePickerDias = new Date(val);
+            },
+              inputDate: new Date(),
+              titleLabel: 'Selecione uma data',
+              setLabel: 'Fixar',
+              todayLabel: 'Hoje',
+              closeLabel: 'Fechar',
+              mondayFirst: false,
+              weeksList: ["D", "S", "T", "Q", "Q", "S", "S"],
+              monthsList: ["Jan", "Fev", "Mar", "Abril", "Maio", "Jun", "Jul", "Ago", "Sete", "Out", "Nov", "Dez"],
+              templateType: 'popup',
+              from: new Date(),
+              to: new Date(2018, 31, 12),
+              showTodayButton: false,
+              dateFormat: 'dd MMMM yyyy',
+              closeOnSelect: true,
+              disableWeekdays: []
+          };
+          ionicDatePicker.openDatePicker(ipObj1);
+        };
+
+})
+
+.controller('imgController', function($scope, $cordovaImagePicker, $ionicPlatform, Camera){
+
+   /* $scope.getImageSaveContact = function() {
+        // Image picker will load images according to these settings
+    var options = {
+       maximumImagesCount: 10,
+       width: 800,
+       height: 800,
+       quality: 80
+      };
+
+      $cordovaImagePicker.getPictures()
+        .then(function (results) {
+          for (var i = 0; i < results.length; i++) {
+            console.log('Image URI: ' + results[i]);
+          }
+        }, function(error) {
+          // error getting photos
+        });
+    };*/
+
+    $scope.takePicture = function() {
+
+    Camera.getPicture().then(function(imageURI) {
+              console.log(imageURI);
+            }, function(err) {
+              console.err(err);
+
+      }, function(err) {
+
+        // Ruh-roh, something bad happened
+
+      }, cameraOptions);
+    }
+})
