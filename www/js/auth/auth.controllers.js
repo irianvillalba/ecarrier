@@ -50,18 +50,62 @@ angular.module('your_app_name.auth.controllers', [])
   };
 })
 
-.controller('LogInCtrl', function($scope, $state){
+.controller('LogInCtrl', function($scope, $state, $http, $ionicPopup, localStorage){
 	$scope.doLogIn = function(){
-		console.log("doing log in");
-		$state.go('app.profile.posts');
+        var req = {
+            method: 'POST',
+            url: rotas.perfil.login,
+            data: {
+                "usuario": $scope.user
+            }
+        }
+
+        $http(req).then(sucesso);
+
+        function sucesso(s) {
+            if (typeof(s.data.id_perfil) == 'undefined') {
+                $ionicPopup.alert({
+                    title: 'E Carrier',
+                    template: s.data
+                })
+            } else {
+                localStorage.setObject('usuario', s.data);
+                $state.go('app.profile.posts');
+            }
+        }
+
+
 	};
 })
 
-.controller('SignUpCtrl', function($scope, $state){
+.controller('CadastroCtrl', function($scope, $state, $http, $ionicPopup){
+
 	$scope.doSignUp = function(){
-		console.log("doing sign up");
-		$state.go('app.profile.posts');
+
+        var req = {
+            method: 'POST',
+            url: rotas.perfil.cadastro,
+            data: {
+                "usuario": $scope.user,
+                "situacao": 'cadastro'
+            }
+        }
+
+        $http(req).then(sucesso);
+
+        function sucesso(s) {
+            $ionicPopup.alert({
+                title: 'E Carrier',
+                template: s.data
+            }).then(function(res) {
+                    if (s.data == 'cadastrado com sucesso')
+                        $state.go('auth.login');
+                });
+
+        }
+
 	};
+
 })
 
 .controller('ForgotPasswordCtrl', function($scope, $state){

@@ -1,18 +1,18 @@
 <div class="card-4" ng-controller="PostCardCtrl">
   <div class="list card">
-  
+
 <!--MENSAGEM AINDA NÃO ENVIADA-->
    <div class="row row-enviado" ng-show="true">
-         <p>Cartão ainda não enviado. Envio programado para: <a>data</a></p>
+         <p>Cartão ainda não enviado. Envio programado para xxx: <a>data</a></p>
      </div>
 <!--FIM MENSAGEM AINDA NÃO ENVIADA-->
-   
-    <div class="item item-image">     
+
+    <div class="item item-image">
       <pre-img ratio="_5_10" helper-class="main-image">
         <img ng-src="{{post.picture}}" spinner-on-load>
       </pre-img>
     </div>
-    <div class="item item-body">
+    <div class="item item-body">post
       <h2 class="card-title">{{post.text}}</h2>
       <p class="card-description">
         <a class="card-user-name" ui-sref="app.profile.posts({userId:post.userId})">

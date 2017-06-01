@@ -188,6 +188,7 @@ class AbstractModel {
             $v = substr($v, 0, -1);
 
             $sql = "INSERT INTO $tabela ($c) VALUES ($v)";
+
             $stmt = $this->db->prepare($sql);
             return $stmt->execute();
         } catch (PDOException $e) {

@@ -242,7 +242,7 @@ angular.module('your_app_name', [
   .state('auth.signup', {
     url: '/signup',
     templateUrl: "views/auth/signup.html",
-    controller: 'SignUpCtrl'
+    controller: 'CadastroCtrl'
   })
 
   .state('auth.forgot-password', {

@@ -19,7 +19,9 @@ angular.module('your_app_name.app.controllers', [])
 })
 
 
-.controller('ProfileCtrl', function($scope, $stateParams, PostService, $ionicHistory, $state, $ionicScrollDelegate) {
+.controller('ProfileCtrl', function($scope, $stateParams, PostService, $ionicHistory, $state, $ionicScrollDelegate, localStorage) {
+
+  $scope.usuario = localStorage.getObject('usuario');
 
   $scope.$on('$ionicView.afterEnter', function() {
     $ionicScrollDelegate.$getByHandle('profile-scroll').resize();
@@ -174,7 +176,14 @@ angular.module('your_app_name.app.controllers', [])
 })
 
 
-.controller('ShopCtrl', function($scope, ShopService) {
+.controller('ShopCtrl', function($scope, ShopService, localStorage) {
+
+  $scope.usuario = localStorage.getObject('usuario');
+
+  $scope.doAltera = function() {
+      console.log("Ok");
+  }
+
   $scope.products = [];
   $scope.popular_products = [];
 
@@ -225,7 +234,14 @@ angular.module('your_app_name.app.controllers', [])
   //$scope.paymentDetails;
 })
 
-.controller('SettingsCtrl', function($scope, $ionicModal) {
+.controller('SettingsCtrl', function($scope, $ionicModal, localStorage) {
+
+  $scope.usuario = localStorage.getObject('usuario');
+
+  $scope.user = {
+      "first_name" :    $scope.usuario.nome,
+      "last_name":      $scope.usuario.sobrenome
+  }
 
   $ionicModal.fromTemplateUrl('views/app/legal/terms-of-service.html', {
     scope: $scope,

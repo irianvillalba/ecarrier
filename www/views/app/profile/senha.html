@@ -10,16 +10,16 @@
             <form name="senha_form" class="padding" novalidate>
               <div class="form-fields-outer list list-inset">
                 <label class="item item-input" show-hide-container>
-                  <input type="password" placeholder="Senha Antiga" name="password" ng-model="user.password" required show-hide-input>
+                  <input type="password" placeholder="Senha Antiga xxxx" name="oldpassword" ng-model="user.oldpassword" required show-hide-input>
                 </label>
                 <label class="item item-input" show-hide-container>
-                  <input type="password" placeholder="Nova Senha" name="password" ng-model="user.password" required show-hide-input>
+                  <input type="password" placeholder="Nova Senha amarelo" name="newpassword" ng-model="user.newpassword" required show-hide-input>
                 </label>
                 <label class="item item-input" show-hide-container>
-                  <input type="password" placeholder="Confirmar Senha" name="password" ng-model="user.password" required show-hide-input>
+                  <input type="password" placeholder="Confirmar Senha" name="confirmpassword" ng-model="user.confirmpassword" required show-hide-input>
                 </label>
               </div>
-              <button type="submit" class="log-in button button-block" ng-disabled="senha_form.$invalid">
+              <button type="submit" class="log-in button button-block" ng-click="doAltera()" ng-disabled="senha_form.$invalid">
                Alterar Senha
               </button>
               <p ng-show="error" class="message error">{{error}}</p>

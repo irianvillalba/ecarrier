@@ -6,7 +6,7 @@
  * Time: 15:11
  * To change this template use File | Settings | File Templates.
  */
-
+error_reporting(0);
 if (isset($_SERVER['HTTP_ORIGIN'])) {
     header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
     header('Access-Control-Allow-Credentials: true');

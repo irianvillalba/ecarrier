@@ -9,10 +9,10 @@
                 <!-- We need a wrapper with width set for the preload image directive -->
                 <div class="user-image-outer">
                   <pre-img ratio="_1_1" helper-class="rounded-image">
-                    <img class="user-image" src="../../../img/gus2016.jpg" spinner-on-load>
+                    <img class="user-image" src="{{user.picture}}" spinner-on-load>
                 	</pre-img>
                 </div>
-                <h2 class="user-name">Gustavo Andrade</h2>                
+                <h2 class="user-name">{{usuario.nome}} {{usuario.sobrenome}}</h2>
               </div>
             </div>          
         </div>
@@ -24,10 +24,10 @@
         <form name="altera_form" class="" novalidate>
           <div class="form-fields-outer list list-inset">
             <label class="item item-input">
-              <input type="text" placeholder="Alterar Nome" name="name" ng-model="user.first.name" required>
+              <input type="text" placeholder="Alterar Nome" name="name" ng-model="user.first_name" required>
             </label>            
             <label class="item item-input">
-              <input type="text" placeholder="Alterar Sobrenome" name="last_name" ng-model="user.last_name" required>
+              <input type="text" placeholder="Alterar Sobrenome" name="last_name" ng-model="user.last_name"  required>
             </label>
              <label class="item item-input">
              <span class="input-label">Data de Nascimento</span>
